@@ -3,4 +3,4 @@ COPY init.sh /init.sh
 RUN chmod +x /init.sh
 RUN /init.sh
 
-ADD conf.d/charset.cnf /etc/mysql/conf.d
+COPY conf.d/charset.cnf /etc/mysql/conf.d
