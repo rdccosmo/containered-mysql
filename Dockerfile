@@ -4,4 +4,3 @@ RUN chmod +x /init.sh
 RUN /init.sh
 
 COPY ./container-files /
-RUN ln -sf /dev/stdout /var/lib/mysql/queries.log
