@@ -1,4 +1,5 @@
 [mysqld]
+log_error_verbosity=3
 general-log
 general-log-file=queries.log
 log-output=file

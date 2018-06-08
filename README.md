@@ -5,3 +5,4 @@ This repository is just a wrapper around the official [docker mysql image](https
 Amongst its configuration features:
 - it listens on 0.0.0.0
 - it logs all queries
+- it loads the latest sql.xz from $MYSQL_BACKUP_DIRECTORY
