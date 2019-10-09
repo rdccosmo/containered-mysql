@@ -6,5 +6,5 @@ LINE_OFFSET=${LINE_OFFSET:-1}
 echo "Importing last backup: ${LATEST_BACKUP}"
 
 if [ -f ${MYSQL_BACKUP_DIRECTORY}/${LATEST_BACKUP} ]; then
-    xzcat "${MYSQL_BACKUP_DIRECTORY}/${LATEST_BACKUP}" | tail -n +${LINE_OFFSET} - | mysql -u ${MYSQL_USER} -p${MYSQL_PASSWORD} --init-command="SET SESSION FOREIGN_KEY_CHECKS=0;" ${MYSQL_DATABASE}
+    xzcat "${MYSQL_BACKUP_DIRECTORY}/${LATEST_BACKUP}" | tail -n +${LINE_OFFSET} - | mysql -u ${MYSQL_USER} -p"${MYSQL_PASSWORD}" --init-command="SET SESSION FOREIGN_KEY_CHECKS=0;" ${MYSQL_DATABASE}
 fi
