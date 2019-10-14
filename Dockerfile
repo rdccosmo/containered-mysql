@@ -1,11 +1,9 @@
-FROM mysql:5.7
+FROM mysql:8
 RUN apt-get update && apt-get install -y \
     xz-utils \
     && rm -rf /var/lib/apt/lists/*
 RUN mkdir /backups
-COPY init.sh /init.sh
-RUN chmod +x /init.sh
 
+RUN touch /var/lib/mysql/queries.log
 COPY ./container-files /
-ENTRYPOINT ["/init.sh"]
 VOLUME /backups
